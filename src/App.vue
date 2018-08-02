@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-    <main-part></main-part>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import mainPart from './components/mainPart/mainPart'
 export default {
-  components:{
-    mainPart
-  }
 }
 </script>
 

@@ -33,17 +33,17 @@
                         <div></div>
                         <div class="discount_pic">
                             <div>
-                                <img src="../../../static/img/discount1.png">
+                                <img src="../../../../static/img/discount1.png">
                                 <p>・属于你的特卖</p>
                             </div>
                             <div class="discount_pic_bottom">
                                 <p>服饰</p>
-                                <img src="../../../static/img/discount3.jpg" alt="">
+                                <img src="../../../../static/img/discount3.jpg" alt="">
                                 <p>1.3折起</p>
                             </div>
                             <div class="discount_pic_bottom">
                                 <p>母婴</p>
-                                <img src="../../../static/img/discount4.jpg" alt="">
+                                <img src="../../../../static/img/discount4.jpg" alt="">
                                 <p>5折起</p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                     <div class="lasttime">
                         <div class="lasttimeleft">
                             <div class="secondkill">
-                                <img src="../../../static/img/guid11.png" alt="">
+                                <img src="../../../../static/img/guid11.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="swiper-wrapper swiperTwo">
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/14.jpg" alt="">
+                                    <img src="../../../../static/img/14.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥500</p>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/15.jpg" alt="">
+                                    <img src="../../../../static/img/15.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥100</p>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/16.jpg" alt="">
+                                    <img src="../../../../static/img/16.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥299</p>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/17.jpg" alt="">
+                                    <img src="../../../../static/img/17.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥399</p>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/18.jpg" alt="">
+                                    <img src="../../../../static/img/18.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥777</p>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="gallery-kill-img">
-                                    <img src="../../../static/img/19-1.jpg" alt="">
+                                    <img src="../../../../static/img/19-1.jpg" alt="">
                                 </div>
                                 <div class="price">
                                     <p class="currentprice red">¥333</p>
@@ -118,7 +118,7 @@
                         </div>
                     </div>	
                     <div class="adpic">
-                        <img src="../../../static/img/20.jpg" alt="">
+                        <img src="../../../../static/img/20.jpg" alt="">
                     </div>
             <!-- 闪购 -->
                     <div  class="shopping">
@@ -127,14 +127,14 @@
                                     <p class="shoppinglefttop-1">闪购</p>
                                     <p class="shoppinglefttop-2">通通1块钱</p>
                                     <div class="shoppinglefttop-img">
-                                        <img src="../../../static/img/21.jpg" alt="">
+                                        <img src="../../../../static/img/21.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="shoppingrighttop shoppinglefttop"	>
                                     <p class="shoppinglefttop-1">发现好货</p>
                                     <p class="shoppinglefttop-2">发现品质生活</p>
                                     <div class="shoppinglefttop-img">
-                                        <img src="../../../static/img/22.jpg" alt="">
+                                        <img src="../../../../static/img/22.jpg" alt="">
                                     </div>
                                 </div>		
                             </div>
@@ -143,7 +143,7 @@
                                     <p class="shoppingleftfoot-1">排行榜</p>
                                     <p class="shoppingleftfoot-2">实时热卖尖货</p>
                                     <div class="shoppingleftfoot-img">
-                                        <img src="../../../static/img/23.jpg" alt="">
+                                        <img src="../../../../static/img/23.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="shoppingrightfoot">
@@ -151,14 +151,14 @@
                                         <p class="shoppingrightfootl-1">会买专辑</p>
                                         <p class="shoppingrightfootl-2">教你买买买</p>
                                         <div class="shoppingrightfootl-img">
-                                            <img src="../../../static/img/24.jpg" alt="">
+                                            <img src="../../../../static/img/24.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="shoppingrightfootr">
                                         <p class="shoppingrightfootr-1">新品首发</p>
                                         <p class="shoppingrightfootr-2">新品享免费</p>
                                         <div class="shoppingrightfootr-img">
-                                            <img src="../../../static/img/25.jpg" alt="">
+                                            <img src="../../../../static/img/25.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>		
@@ -172,23 +172,23 @@
 <script>
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.min.css'
-import a from '../../../static/img/bg1.jpg'
-import b from '../../../static/img/bg2.jpg'
-import c from '../../../static/img/bg3.jpg'
-import d from '../../../static/img/bg4.jpg'
-import e from '../../../static/img/bg5.jpg'
-import f from '../../../static/img/bg6.jpg'
-import g from '../../../static/img/bg7.jpg'
-import guid01 from '../../../static/img/guid1.png'
-import guid02 from '../../../static/img/guid2.png'
-import guid03 from '../../../static/img/guid3.png'
-import guid04 from '../../../static/img/guid4.png'
-import guid05 from '../../../static/img/guid5.png'
-import guid06 from '../../../static/img/guid6.png'
-import guid07 from '../../../static/img/guid7.png'
-import guid08 from '../../../static/img/guid8.png'
-import guid09 from '../../../static/img/guid9.png'
-import guid010 from '../../../static/img/guid10.png'
+import a from '../../../../static/img/bg1.jpg'
+import b from '../../../../static/img/bg2.jpg'
+import c from '../../../../static/img/bg3.jpg'
+import d from '../../../../static/img/bg4.jpg'
+import e from '../../../../static/img/bg5.jpg'
+import f from '../../../../static/img/bg6.jpg'
+import g from '../../../../static/img/bg7.jpg'
+import guid01 from '../../../../static/img/guid1.png'
+import guid02 from '../../../../static/img/guid2.png'
+import guid03 from '../../../../static/img/guid3.png'
+import guid04 from '../../../../static/img/guid4.png'
+import guid05 from '../../../../static/img/guid5.png'
+import guid06 from '../../../../static/img/guid6.png'
+import guid07 from '../../../../static/img/guid7.png'
+import guid08 from '../../../../static/img/guid8.png'
+import guid09 from '../../../../static/img/guid9.png'
+import guid010 from '../../../../static/img/guid10.png'
 import {mapGetters} from 'vuex'
 import BScroll from 'better-scroll'
 export default {
@@ -303,7 +303,7 @@ export default {
     .discount_pic{
         width: 100%;
         height: 3rem;
-        background: url(../../../static/img/discount2.jpg);
+        background: url(../../../../static/img/discount2.jpg);
         background-size: cover;
         position: relative;
         >div:first-child{

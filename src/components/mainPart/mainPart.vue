@@ -1,11 +1,12 @@
 <template>
     <div class="mainPart" >
-        <div>
-            <router-view></router-view>
-        </div>
+        <keep-alive>
+            <router-view v-if="$route.meta.keepAlive"></router-view>
+        </keep-alive>
+        <router-view v-if="!$route.meta.keepAlive"></router-view>
         <div id="bottomNav">
             <div>
-                <router-link to="/cssShow">
+                <router-link to="/">
                     <i class="iconfont">&#xe743;</i>
                     <p>基础css</p>
                 </router-link>

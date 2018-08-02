@@ -1,6 +1,7 @@
 <template>
   <div class="login">
-      <li> 登录</li>
+      <!-- <li class="Toptitle"> 登录</li> -->
+        <!-- <head-part :title='"登录"'></head-part> -->
       <p>
         <span>帐号密码登录</span>
         <span>手机验证登录</span>
@@ -13,25 +14,35 @@
       </div>
       <li class="sub" @click="loginIn()">登录</li>
       <li @click="toRegist()" class="reg">快速注册</li>
+      <!-- <regist></regist>
+      <mainPart></mainPart> -->
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+// import headPart from '../../header/header'
+// import mainPart from '../mainPart/mainPart'
 export default {
   components:{
+    // headPart
   },
   methods:{
     toRegist(){
-      this.$store.dispatch('toRegist');
+        // this.$router.push({name:'regist'})
     },
     loginIn(){
-      let phoneNum = this.$refs.phoneNum.value;
-      let password = this.$refs.password.value;
-      let dd={
-        phoneNum:phoneNum,
-        password:password
-      } 
-      this.$store.dispatch('loginIn',dd);
+    //   axios.post('/api/login/login.action',
+    //     {
+    //         params: {
+    //             username:'admin',
+    //             password:'123456'
+    //         }
+    //     }).then( res => {
+	// 		      console.log('success')
+	// 	    }).then(res=>{
+    //         console.log('error')
+    //     })
     }
   }
 }
@@ -40,7 +51,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
   .login{
-    >li:first-child{
+    .Toptitle{
       width: 100%;
       height: 1rem;
       line-height: 1rem;

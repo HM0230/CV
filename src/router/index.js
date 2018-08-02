@@ -1,43 +1,59 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import cssShow from '../components/cssShow/cssShow.vue'
-import commonFun from '../components/commonFun/commonFun.vue'
-import list from '../components/list/list.vue'
-import shoppingCar from '../components/shoppingCar/shoppingCar.vue'
-import mine from '../components/mine/mine.vue'
-import login from '../components/login/login.vue'
+import mainPart from '../components/mainPart/mainPart.vue'
+
+import cssShow from '../components/mainPart/cssShow/cssShow.vue'
+import commonFun from '../components/mainPart/commonFun/commonFun.vue'
+import list from '../components/mainPart/list/list.vue'
+import shoppingCar from '../components/mainPart/shoppingCar/shoppingCar.vue'
+import mine from '../components/mainPart/mine/mine.vue'
+
+import mapPage from '../components/mainPart/commonFun/mapPage/mapPage.vue'
+// import login from '../components/userAction/login/login.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-  		path:'/cssShow',
-  		component:cssShow
-  	},
+		{
+			path:'/',
+			component:mainPart,
+			children:[
+				{
+					path:'/',
+					component:cssShow
+				},
+				{
+					path:'/commonFun',
+					name:'commonFun',
+					component:commonFun,
+				},
+				{
+					path:'/list',
+					component:list
+				},
+				{
+					path:'/shoppingCar',
+					component:shoppingCar
+				},
+				{
+					path:'/mine',
+					component:mine
+				},
+			]
+		},
+		{
+			path:'/mapPage',
+			name:'mapPage',
+			component:mapPage
+		},
   	{
-   		path:'/commonFun',
-  		component:commonFun
-  	},
-  	{
-  		path:'/list',
-  		component:list
-    },
-    {
-  		path:'/shoppingCar',
-  		component:shoppingCar
-    },
-    {
-  		path:'/mine',
-  		component:mine
-    },
-  	{
-  		path:'*',
-  		component:login
-	},
-	{
-		path:'/',
-		redirect:'/cssShow'
-	}
+			path:'*',
+  		component:mainPart
+		},
+		{
+			path:'/',
+			redirect:'/mainPart'
+		}
   ]
 })
