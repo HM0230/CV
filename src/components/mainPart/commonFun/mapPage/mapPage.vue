@@ -22,7 +22,6 @@ export default {
         creatMap(){
             var _this=this;
             this.map = new plus.maps.Map("map");
-           
             this.map.showUserLocation( true );
             // setTimeout(()=>{
                 this.map.getUserLocation( function ( state, point ){
@@ -47,10 +46,9 @@ export default {
             // },200)
         }
     },
-    beforeRouteLeave(to, from, next){
+    beforeDestroy(){
         console.log('leave');
         this.map.close(),this.map=null;
-        next();
     }
 }
 </script>

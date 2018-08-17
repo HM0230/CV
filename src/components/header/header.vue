@@ -26,6 +26,8 @@ export default {
         font-size: 0.28rem;
         border-bottom: 0.01rem solid #efefef;
         position: relative;
+        background: white;
+        z-index: 888;
         img{
             position: absolute;
             left: 0.15rem;

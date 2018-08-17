@@ -10,7 +10,7 @@
         <x-button mini plain type="primary" >QQ</x-button>
         <x-button mini plain type="primary" >wechat</x-button>
         <x-button mini plain type="primary" >sina</x-button>
-        <x-button mini plain type="primary" >barcode</x-button>
+        <x-button mini plain type="primary" @click.native="toBarcode">barcode</x-button>
         <x-button mini plain type="primary" >wxpay</x-button>
         <x-button mini plain type="primary" >alipay</x-button>
     <!-- </div> --> 
@@ -30,6 +30,9 @@ export default {
   methods:{
     toMap(){
       this.$router.push({name:'mapPage'})
+    },
+    toBarcode(){
+      this.$router.push({name:'barcode'})
     }
   }
 }

@@ -218,20 +218,21 @@ export default {
         // $("#homepage").height(win);
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
-            paginationClickable: true,
+            // paginationClickable: true,
             loop: true,
             speed: 600,
-            autoplay: 2000,
-            onTouchEnd: function() {
-                swiper.startAutoplay()
-            }
+            autoplay: {
+                disableOnInteraction: false,
+            },
         });
         var swiper = new Swiper('.swiper-container2', {
             slidesPerView: 3,
             spaceBetween: 10,
             loop: true,
-            speed: 600,
-            autoplay: 2000,
+            speed: 1000,
+            autoplay: {
+                disableOnInteraction: false,
+            },
         });
         this.$nextTick( () => {
             if( !this.homePageSCroll ){

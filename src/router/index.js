@@ -9,12 +9,12 @@ import shoppingCar from '../components/mainPart/shoppingCar/shoppingCar.vue'
 import mine from '../components/mainPart/mine/mine.vue'
 
 import mapPage from '../components/mainPart/commonFun/mapPage/mapPage.vue'
-// import login from '../components/userAction/login/login.vue'
+import barcode from '../components/mainPart/commonFun/barcode/barcode.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+  	routes: [
 		{
 			path:'/',
 			component:mainPart,
@@ -47,13 +47,18 @@ export default new Router({
 			name:'mapPage',
 			component:mapPage
 		},
-  	{
+		{
+			path:'/barcode',
+			name:'barcode',
+			component:barcode
+		},
+		{
 			path:'*',
-  		component:mainPart
+			component:mainPart
 		},
 		{
 			path:'/',
 			redirect:'/mainPart'
 		}
-  ]
+  	]
 })
