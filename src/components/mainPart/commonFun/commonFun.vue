@@ -7,12 +7,9 @@
         <x-button mini plain type="primary" @click.native="toMap">Map2</x-button>
         <x-button mini plain type="primary" >im</x-button>
         <x-button mini plain type="primary" >picture</x-button>
-        <x-button mini plain type="primary" >QQ</x-button>
-        <x-button mini plain type="primary" >wechat</x-button>
-        <x-button mini plain type="primary" >sina</x-button>
+        <x-button mini plain type="primary" >三方登录</x-button>
         <x-button mini plain type="primary" @click.native="toBarcode">barcode</x-button>
-        <x-button mini plain type="primary" >wxpay</x-button>
-        <x-button mini plain type="primary" >alipay</x-button>
+        <x-button mini plain type="primary" @click.native="toPay">三方支付</x-button>
     <!-- </div> --> 
     <canvas></canvas>
   </div>
@@ -33,6 +30,9 @@ export default {
     },
     toBarcode(){
       this.$router.push({name:'barcode'})
+    },
+    toPay(){
+      this.$router.push({name:'payment'})
     }
   }
 }

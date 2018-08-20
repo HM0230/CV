@@ -10,7 +10,7 @@ import mine from '../components/mainPart/mine/mine.vue'
 
 import mapPage from '../components/mainPart/commonFun/mapPage/mapPage.vue'
 import barcode from '../components/mainPart/commonFun/barcode/barcode.vue'
-
+import payment from '../components/mainPart/commonFun/payment/payment.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +51,11 @@ export default new Router({
 			path:'/barcode',
 			name:'barcode',
 			component:barcode
+		},
+		{
+			path:'/payment',
+			name:"payment",
+			component:payment
 		},
 		{
 			path:'*',
