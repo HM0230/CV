@@ -11,6 +11,8 @@ import mine from '../components/mainPart/mine/mine.vue'
 import mapPage from '../components/mainPart/commonFun/mapPage/mapPage.vue'
 import barcode from '../components/mainPart/commonFun/barcode/barcode.vue'
 import payment from '../components/mainPart/commonFun/payment/payment.vue'
+import oauthLogin from '../components/mainPart/commonFun/oauthLogin/oauthLogin.vue'
+import share from '../components/mainPart/commonFun/share/share.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -56,6 +58,16 @@ export default new Router({
 			path:'/payment',
 			name:"payment",
 			component:payment
+		},
+		{
+			path:'/oauthLogin',
+			name:'oauthLogin',
+			component:oauthLogin
+		},
+		{
+			path:'/share',
+			name:'share',
+			component:share
 		},
 		{
 			path:'*',

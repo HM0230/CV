@@ -7,9 +7,11 @@
         <x-button mini plain type="primary" @click.native="toMap">Map2</x-button>
         <x-button mini plain type="primary" >im</x-button>
         <x-button mini plain type="primary" >picture</x-button>
-        <x-button mini plain type="primary" >三方登录</x-button>
-        <x-button mini plain type="primary" @click.native="toBarcode">barcode</x-button>
+        <x-button mini plain type="primary" @click.native="toBarcode">二维码识别</x-button>
+        <x-button mini plain type="primary" @click.native="toAuthLogin">三方登录</x-button>
+        <x-button mini plain type="primary" @click.native="toShare">三方分享</x-button>        
         <x-button mini plain type="primary" @click.native="toPay">三方支付</x-button>
+        <x-button mini plain type="primary" @click.native="imgView">图片预览</x-button>
     <!-- </div> --> 
     <canvas></canvas>
   </div>
@@ -33,6 +35,15 @@ export default {
     },
     toPay(){
       this.$router.push({name:'payment'})
+    },
+    toAuthLogin(){
+      this.$router.push({name:'oauthLogin'})
+    },
+    toShare(){
+      this.$router.push({name:'share'})
+    },
+    imgView(){
+      
     }
   }
 }

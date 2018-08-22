@@ -1,14 +1,17 @@
 <template>
     <div>
+        <head-part :title='"三方支付"' :backUrl='"commonFun"'></head-part>
         <x-button mini plain type="primary" @click.native="pay('wxpay')">wxpay</x-button>
         <x-button mini plain type="primary" @click.native="pay('alipay')">Alipay</x-button>
     </div>
 </template>
 <script>
+import headPart from '../../../header/header'
 import { XButton } from 'vux'
 export default {
     components:{
-        XButton
+        XButton,
+        headPart
     },
     data(){
         return {
@@ -41,13 +44,6 @@ export default {
         			plus.nativeUI.alert("不支持此支付通道！",null,"捐赠");
         			return;
             }
-            // this.$http.get(this.channel)
-            // .then(function (response) {
-            //     console.log(response);
-            // })
-            // .catch(function (error) {
-            //     console.log(error);
-            // });
             var _this=this;
     		var xhr=new XMLHttpRequest();
     		xhr.onreadystatechange=function(){
