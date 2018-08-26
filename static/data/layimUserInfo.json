@@ -1,0 +1,38 @@
+{
+	"code": "0",
+	"data": {
+		"mine": {
+			"avatar": "http:\/\/218.94.62.138:8080\/pxos\/layui\/layui\/images\/0.jpg",
+			"id": 1,
+			"sign": "admin",
+			"status": "online",
+			"username": "admin"
+		},
+		"friend": [{
+			"basePath": "http:\/\/218.94.62.138:8080\/pxos\/",
+			"create_time": "2018-01-13T17:10:33",
+			"groupname": "我的好友",
+			"id": 23,
+			"list": [{
+				"avatar": "http:\/\/218.94.62.138:8080\/pxos\/layui\/layui\/images\/0.jpg",
+				"id": 2,
+				"sign": null,
+				"status": "offline",
+				"username": "friend01"
+			}],
+			"user_id": 1
+		}],
+		"group": [{
+			"adminid": 1,
+			"avatar": "http:\/\/218.94.62.138:8080\/pxos\/layui\/layui\/images\/group_public.jpg",
+			"create_time": "2018-01-13T17:10:57",
+			"groupname": "普信",
+			"groupuser": null,
+			"id": 14,
+			"introuce": null,
+			"members": 0,
+			"notice": "普信"
+		}]
+	},
+	"msg": ""
+}

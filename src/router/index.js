@@ -13,6 +13,8 @@ import barcode from '../components/mainPart/commonFun/barcode/barcode.vue'
 import payment from '../components/mainPart/commonFun/payment/payment.vue'
 import oauthLogin from '../components/mainPart/commonFun/oauthLogin/oauthLogin.vue'
 import share from '../components/mainPart/commonFun/share/share.vue'
+import imNav from '../components/mainPart/commonFun/im/imNav.vue'
+import layimCom from '../components/mainPart/commonFun/im/layim.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -68,6 +70,16 @@ export default new Router({
 			path:'/share',
 			name:'share',
 			component:share
+		},
+		{
+			path:'/imNav',
+			name:'imNav',
+			component:imNav
+		},
+		{
+			path:'/layimCom',
+			name:'layimCom',
+			component:layimCom
 		},
 		{
 			path:'*',

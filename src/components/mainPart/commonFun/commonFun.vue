@@ -5,7 +5,7 @@
       <!-- <mt-button type="danger" @click="toMap">Map</mt-button> -->
         <x-button mini plain type="primary" @click.native="toMap">Map1</x-button>
         <x-button mini plain type="primary" @click.native="toMap">Map2</x-button>
-        <x-button mini plain type="primary" >im</x-button>
+        <x-button mini plain type="primary" @click.native="toIm">im</x-button>
         <x-button mini plain type="primary" >picture</x-button>
         <x-button mini plain type="primary" @click.native="toBarcode">二维码识别</x-button>
         <x-button mini plain type="primary" @click.native="toAuthLogin">三方登录</x-button>
@@ -44,6 +44,9 @@ export default {
     },
     imgView(){
       
+    },
+    toIm(){
+      this.$router.push({name:'imNav'})
     }
   }
 }
