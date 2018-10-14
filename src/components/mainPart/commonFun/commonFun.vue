@@ -4,9 +4,9 @@
     <!-- <div class="funLink" > -->
       <!-- <mt-button type="danger" @click="toMap">Map</mt-button> -->
         <x-button mini plain type="primary" @click.native="toMap">Map1</x-button>
-        <x-button mini plain type="primary" @click.native="toMap">Map2</x-button>
+        <!-- <x-button mini plain type="primary" @click.native="toMap">Map2</x-button> -->
         <x-button mini plain type="primary" @click.native="toIm">im</x-button>
-        <x-button mini plain type="primary" >picture</x-button>
+        <x-button mini plain type="primary" @click.native="toCar">购物车</x-button>
         <x-button mini plain type="primary" @click.native="toBarcode">二维码识别</x-button>
         <x-button mini plain type="primary" @click.native="toAuthLogin">三方登录</x-button>
         <x-button mini plain type="primary" @click.native="toShare">三方分享</x-button>        
@@ -25,6 +25,9 @@ export default {
   },
   mounted() {
     commonFunBg();
+    // plus.key.addEventListener("backbutton",function(){
+    //     plus.runtime.quit();
+    // });
   },
   methods:{
     toMap(){
@@ -43,10 +46,13 @@ export default {
       this.$router.push({name:'share'})
     },
     imgView(){
-      
+      this.$router.push({name:'imgView'})
     },
     toIm(){
       this.$router.push({name:'imNav'})
+    },
+    toCar(){
+      this.$router.push({name:'shoppingCar'})
     }
   }
 }

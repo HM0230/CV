@@ -1,6 +1,6 @@
 <template>
     <div>
-        <head-part :title='"Map"' :backUrl='"commonFun"'></head-part>
+        <head-part :title='"三方登录"' :backUrl='"commonFun"'></head-part>
         <div class="topImg">
             <img :src="info.figureurl" alt="">
             <div>
@@ -19,6 +19,7 @@
 import headPart from '../../../header/header'
 import { XButton } from 'vux'
 import { Toast } from 'mint-ui';
+import defaultinfo from '../../../../../static/mockData/default.js'
 export default {
     components:{
         headPart,
@@ -38,23 +39,33 @@ export default {
         }, (e)=> {
             alert("获取登录服务列表失败：" + e.message + " - " + e.code);
         });
+        // var that=this;
+        // plus.key.addEventListener("backbutton",function(){
+        //     that.$router.push({name:'commonFun'})
+        // });
     },
     methods:{
         loadDefaultInfo(){
-            this.$http.get('/static/data/default.json')
-            .then(({data:{result}})=>{
-                // console.log(result)
-                this.info={
-                    nickname:result.nickname,
-                    province:result.province,
-                    figureurl:result.figureurl,
-                    gender:result.gender,
-                    city:result.city
-                }
-                // console.log(this.info)
-            }).then((err)=>{
-                console.log(err);
-            })
+            // this.$http.get('/static/data/default.json')
+            // .then(({data:{result}})=>{
+            //     this.info={
+            //         nickname:result.nickname,
+            //         province:result.province,
+            //         figureurl:result.figureurl,
+            //         gender:result.gender,
+            //         city:result.city
+            //     }
+            // }).then((err)=>{
+            //     console.log(err);
+            // })
+            var result = defaultinfo.result;
+            this.info={
+                nickname:result.nickname,
+                province:result.province,
+                figureurl:result.figureurl,
+                gender:result.gender,
+                city:result.city
+            }
         },
         authLogin(type){
             var s;

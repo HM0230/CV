@@ -24,7 +24,7 @@
                 </router-link>
             </div>
             <div>
-                <router-link to="/shoppingCar">
+                <router-link to="/generalize">
                     <i class="iconfont">&#xe62b;</i>
                     <p>其他</p>
                 </router-link>
@@ -40,11 +40,18 @@
 </template>
 <script>
 import {mapGetters} from 'vuex'
+import { Toast } from 'mint-ui';
 export default {
    computed:{
        ...mapGetters([
        ])
-   }
+   },
+   components:{
+       Toast
+   },
+   mounted() {
+        
+   },
 }
 </script>
 <style lang="less" scoped>

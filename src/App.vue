@@ -6,6 +6,10 @@
 
 <script>
 export default {
+  mounted(){
+    var h = location.href;
+    console.log(h);
+  }
 }
 </script>
 

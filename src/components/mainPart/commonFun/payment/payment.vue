@@ -30,6 +30,10 @@ export default {
         },(e)=>{
             alert("获取支付通道失败："+e.message);
         });
+        // var that=this;
+        // plus.key.addEventListener("backbutton",function(){
+        //     that.$router.push({name:'commonFun'})
+        // });
     },
     methods:{
         pay(id){

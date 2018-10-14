@@ -1,5 +1,5 @@
 const state = {
-	showRegist:false,
-	showHomepage:false,
+	ifshowBigImg:false,
+	BigImgIndex:0,
 }
 export default state;

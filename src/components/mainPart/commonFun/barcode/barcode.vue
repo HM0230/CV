@@ -24,6 +24,10 @@
 	    },
 	    mounted() {
 			setTimeout(()=>this.startRecognize(), 100);
+			// var that=this;
+			// plus.key.addEventListener("backbutton",function(){
+			// 	that.$router.push({name:'commonFun'})
+			// });
 	    },
 	    methods: {
 			onmarked( type, result ) {

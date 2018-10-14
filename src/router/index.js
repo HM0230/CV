@@ -5,7 +5,7 @@ import mainPart from '../components/mainPart/mainPart.vue'
 import cssShow from '../components/mainPart/cssShow/cssShow.vue'
 import commonFun from '../components/mainPart/commonFun/commonFun.vue'
 import list from '../components/mainPart/list/list.vue'
-import shoppingCar from '../components/mainPart/shoppingCar/shoppingCar.vue'
+import generalize from '../components/mainPart/generalize/generalize.vue'
 import mine from '../components/mainPart/mine/mine.vue'
 
 import mapPage from '../components/mainPart/commonFun/mapPage/mapPage.vue'
@@ -15,6 +15,8 @@ import oauthLogin from '../components/mainPart/commonFun/oauthLogin/oauthLogin.v
 import share from '../components/mainPart/commonFun/share/share.vue'
 import imNav from '../components/mainPart/commonFun/im/imNav.vue'
 import layimCom from '../components/mainPart/commonFun/im/layim.vue'
+import shoppingCar from '../components/mainPart/commonFun/shoppingCar/shoppingCar.vue'
+import imgView from '../components/mainPart/commonFun/imgView/imgView.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -37,8 +39,8 @@ export default new Router({
 					component:list
 				},
 				{
-					path:'/shoppingCar',
-					component:shoppingCar
+					path:'/generalize',
+					component:generalize
 				},
 				{
 					path:'/mine',
@@ -80,6 +82,15 @@ export default new Router({
 			path:'/layimCom',
 			name:'layimCom',
 			component:layimCom
+		},{
+			path:'/shoppingCar',
+			name:'shoppingCar',
+			component:shoppingCar
+		},
+		{
+			path:'/imgView',
+			name:'imgView',
+			component:imgView
 		},
 		{
 			path:'*',

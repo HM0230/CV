@@ -17,6 +17,10 @@ export default {
     },
     mounted() {
         this.creatMap();
+        // var that=this;
+        // plus.key.addEventListener("backbutton",function(){
+        //     that.$router.push({name:'commonFun'})
+        // });
     },
     methods:{
         creatMap(){
@@ -47,7 +51,7 @@ export default {
         }
     },
     beforeDestroy(){
-        console.log('leave');
+        // console.log('leave');
         this.map.close(),this.map=null;
     }
 }

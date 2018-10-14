@@ -77,7 +77,7 @@
 </template>
 
 <script>
-   
+   import layimuserinfo from '../../../../../static/mockData/layimUserInfo.js'
 	export default{
        data(){
            return {
@@ -130,6 +130,10 @@
 		},
 		mounted(){
 			var _this=this;
+            //plus.key.addEventListener("backbutton",function(){
+            //    _this.layer.closeAll();
+            //    _this.$router.push({name:"imNav"});
+            //});
 			layui.use('mobile', function(){
                 var mobile = layui.mobile,
                 layim = mobile.layim,
@@ -143,31 +147,31 @@
 					//dataType:"jsonp",
 					//jsonp:'callback',
 					//success: function({data}) {
-                _this.$http.get('/static/data/layimUserInfo.json')
-                .then(({data:{data}})=>{
-                    console.log(data)
-                        _this.alldata=data
-                        console.log(_this.alldata);
-                        layim.config({
-                            init: {
-                                'mine':_this.alldata.mine,
-                                'friend':_this.alldata.friend,
-                                'group':_this.alldata.group,
-                            },
+                //_this.$http.get('/static/data/layimUserInfo.json')
+                //.then(({data:{data}})=>{
+                //    console.log(data)
+                //        _this.alldata=data
+                //        console.log(_this.alldata);
+                 //       layim.config({
+                            //init: {
+                            //    'mine':_this.alldata.mine,
+                            //    'friend':_this.alldata.friend,
+                            //    'group':_this.alldata.group,
+                            //},
                             //上传图片接口
-                            uploadImage: {
-                            url: '/upload/image' ,//（返回的数据格式见下文）
-                            type: '' //默认post
-                            },
+                            //uploadImage: {
+                            //url: '/upload/image' ,//（返回的数据格式见下文）
+                            //type: '' //默认post
+                            //},
                             
                             //上传文件接口
-                            uploadFile: {
-                            url: '/upload/file', //（返回的数据格式见下文）
-                            type: '' //默认post
-                            },
-                            sendphonetics:{
+                            //uploadFile: {
+                            //url: '/upload/file', //（返回的数据格式见下文）
+                            //type: '' //默认post
+                            //},
+                            //sendphonetics:{
 
-                            },
+                            //},
                             //brief: true,
 
                             //扩展聊天面板工具栏
@@ -178,33 +182,85 @@
                             // }],
                             
                             //扩展更多列表
-                            moreList: [{
-                            alias: 'find',
-                            title: '发现',
-                            iconUnicode: '&#xe628;', //图标字体的unicode，可不填
-                            iconClass: '', //图标字体的class类名
-                            },
+                            //moreList: [{
+                            //alias: 'find',
+                            //title: '发现',
+                            //iconUnicode: '&#xe628;', //图标字体的unicode，可不填
+                            //iconClass: '', //图标字体的class类名
+                            //},
                             /*{
                             alias: 'share',
                             title: '分享与邀请',
                             : '&#xe641;', //图标字体的unicode，可不填
                             iconClass: '', //图标字体的class类名
                             }*/
-                            ],
+                            //],
                             
                             //,tabIndex: 1 //用户设定初始打开的Tab项下标
                             //,isNewFriend: false //是否开启“新的朋友”
-                            isgroup: true ,//是否开启“群聊”
+                            //isgroup: true ,//是否开启“群聊”
                             //,chatTitleColor: '#c00' //顶部Bar颜色//onclick="console.log(1111);this.layer.closeAll()"
-                            title: '<span id="layOut" style="position:absolute;left:10px;top:0;padding-left:10px"><i class="layui-icon layim-chat-back" style="position:absolute;left:-10px;top:0;"></i>普信环保</span>' //应用名，默认：我的IM
-                        });
-                        _this.myListener();
-					//}
-                }).then((err)=>{
-                    console.log(err);
-                })
-				//});	
+                            //title: '<span id="layOut" style="position:absolute;left:10px;top:0;padding-left:10px"><i class="layui-icon layim-chat-back" style="position:absolute;left:-10px;top:0;"></i>普信环保</span>' //应用名，默认：我的IM
+                //        });
+                //        _this.myListener();
+                //}).then((err)=>{
+                 //   console.log(err);
+                //})
                 
+                var alldata=layimuserinfo.data;
+                 _this.alldata=alldata
+                console.log(_this.alldata);
+                layim.config({
+                    init: {
+                        'mine':_this.alldata.mine,
+                        'friend':_this.alldata.friend,
+                        'group':_this.alldata.group,
+                    },
+                    //上传图片接口
+                    uploadImage: {
+                    url: '/upload/image' ,//（返回的数据格式见下文）
+                    type: '' //默认post
+                    },
+                    
+                    //上传文件接口
+                    uploadFile: {
+                    url: '/upload/file', //（返回的数据格式见下文）
+                    type: '' //默认post
+                    },
+                    sendphonetics:{
+
+                    },
+                    //brief: true,
+
+                    //扩展聊天面板工具栏
+                    // tool: [{
+                    // alias: 'code',
+                    // title: '代码',
+                    // iconUnicode: '&#xe64e;',
+                    // }],
+                    
+                    //扩展更多列表
+                    moreList: [{
+                    alias: 'find',
+                    title: '发现',
+                    iconUnicode: '&#xe628;', //图标字体的unicode，可不填
+                    iconClass: '', //图标字体的class类名
+                    },
+                    /*{
+                    alias: 'share',
+                    title: '分享与邀请',
+                    : '&#xe641;', //图标字体的unicode，可不填
+                    iconClass: '', //图标字体的class类名
+                    }*/
+                    ],
+                    
+                    //,tabIndex: 1 //用户设定初始打开的Tab项下标
+                    //,isNewFriend: false //是否开启“新的朋友”
+                    isgroup: true ,//是否开启“群聊”
+                    //,chatTitleColor: '#c00' //顶部Bar颜色//onclick="console.log(1111);this.layer.closeAll()"
+                    title: '<span id="layOut" style="position:absolute;left:10px;top:0;padding-left:10px"><i class="layui-icon layim-chat-back" style="position:absolute;left:-10px;top:0;"></i>普信环保</span>' //应用名，默认：我的IM
+                });
+                _this.myListener();
                 
                 //创建一个会话
                 /*

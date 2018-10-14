@@ -19,6 +19,12 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
+            <!-- 活动图片链接 -->
+                    <div class="linkpic">
+                        <img src="../../../../static/img/linkpic01.png" alt="">
+                        <img src="../../../../static/img/linkpic02.gif" alt="">
+                        <img src="../../../../static/img/linkpic03.png" alt="">
+                    </div>
             <!-- 购物分类导航 -->
                     <div class="guid">
                         <div class="guid01">
@@ -213,9 +219,9 @@ export default {
         }
     },
     mounted(){
-        // console.log($("#bottomNav").height())
-        // var win=$(window).height()-$("#bottomNav").height()+'px';
-        // $("#homepage").height(win);
+        // plus.key.addEventListener("backbutton",function(){
+        //     plus.runtime.quit();
+        // });
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             // paginationClickable: true,
@@ -262,6 +268,13 @@ export default {
             height:3.5rem;
         }
     }
+    /*活动图片链接*/
+    .linkpic{
+        img{
+            width:33.33%;
+            float: left;
+        }
+    }
     /*购物分类导航*/
     .guid{
         width: 100%;
@@ -304,7 +317,7 @@ export default {
     .discount_pic{
         width: 100%;
         height: 3rem;
-        background: url(../../../../static/img/discount2.jpg);
+        background-image: "/static/img/discount2.jpg";/*../../../../static/img/discount2.jpg*/
         background-size: cover;
         position: relative;
         >div:first-child{

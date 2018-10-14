@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="../../../static/img/icon/back.png" alt="" @click="toUrl">
+        <img src="../../../static/img/icon/back.png" v-if="backUrl" alt="" @click="toUrl">
         <span>{{title}}</span>
     </div>
 </template>
